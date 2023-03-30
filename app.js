@@ -2,6 +2,9 @@ var express = require("express");
 var path = require("path");
 var bodyParser = require("body-parser");
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 var indexRouter = require("./routes/todos");
 
 var app = express();
